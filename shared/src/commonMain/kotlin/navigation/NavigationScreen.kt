@@ -1,8 +1,7 @@
 package navigation
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.offset
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.Icon
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
@@ -13,12 +12,13 @@ import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 
 
-sealed class NavigationScreen(
+sealed class NavigationScreen @OptIn(ExperimentalResourceApi::class) constructor(
     val route: String,
-    val title: String = "AppString.APP_TITLE",
     val navIcon: (@Composable () -> Unit) = {
-        Icon(
-            Icons.Filled.Home, contentDescription = "home"
+        Image(
+            painterResource("media.xml"),
+            null,
+            modifier = Modifier.height(20.dp).width(20.dp),
         )
     },
     val objectName: String = "",
@@ -31,17 +31,17 @@ sealed class NavigationScreen(
     object MovieDetail :
         NavigationScreen("movie_detail_screen", objectName = "id", objectPath = "/{id}")
 
-    object HomeNav : NavigationScreen("home_screen", title = "Home", navIcon = {
-        Icon(
-            Icons.Filled.Home,
-            contentDescription = "search",
-            modifier = Modifier
-                .padding(end = 16.dp)
-                .offset(x = 10.dp)
+    @OptIn(ExperimentalResourceApi::class)
+    object HomeNav : NavigationScreen("home_screen", navIcon = {
+        Image(
+            painterResource("media.xml"),
+            null,
+            modifier = Modifier.height(20.dp).width(20.dp),
         )
     })
 
-    object SearchNav : NavigationScreen("seach_screen", title = "Search", navIcon = {
+    object SearchNav : NavigationScreen("seach_screen", navIcon = {
+
         Icon(
             Icons.Filled.Search,
             contentDescription = "search",
@@ -52,23 +52,20 @@ sealed class NavigationScreen(
     })
 
     @OptIn(ExperimentalResourceApi::class)
-    object TicketNav : NavigationScreen("ticket_screen", title = "Tiket",  navIcon = {
-        Icon(
-            Icons.Filled.Star,
-            contentDescription = "Ticket",
-            modifier = Modifier
-                .padding(end = 16.dp)
-                .offset(x = 10.dp)
+    object TicketNav : NavigationScreen("ticket_screen",  navIcon = {
+        Image(
+            painterResource("ticket.xml"),
+            null,
+            modifier = Modifier.height(20.dp).width(20.dp),
         )
     })
 
-    object ProfileNav : NavigationScreen("profile_screen", title = "Profile", navIcon = {
-        Icon(
-            Icons.Filled.Person,
-            contentDescription = "Profile",
-            modifier = Modifier
-                .padding(end = 16.dp)
-                .offset(x = 10.dp)
+    @OptIn(ExperimentalResourceApi::class)
+    object ProfileNav : NavigationScreen("profile_screen", navIcon = {
+        Image(
+            painterResource("person.xml"),
+            null,
+            modifier = Modifier.height(20.dp).width(20.dp),
         )
     })
 }
