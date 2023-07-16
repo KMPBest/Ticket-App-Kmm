@@ -1,11 +1,19 @@
 package navigation
 
 import androidx.compose.foundation.background
-import androidx.compose.material.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.BottomNavigation
+import androidx.compose.material.BottomNavigationItem
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 import moe.tlaster.precompose.navigation.NavHost
 import moe.tlaster.precompose.navigation.NavOptions
 import moe.tlaster.precompose.navigation.Navigator
@@ -13,7 +21,6 @@ import screens.home.home.HomeScreen
 import screens.profile.profile.ProfileScreen
 import screens.search.search.SearchScreen
 import screens.ticket.ticket.TicketScreen
-
 
 @Composable
 fun Navigation(navigator: Navigator) {
@@ -39,11 +46,10 @@ fun Navigation(navigator: Navigator) {
 @Composable
 fun currentRoute(navigator: Navigator): String? {
     return navigator.currentEntry.collectAsState(null).value?.route?.route
-
 }
 @Composable
-fun BottomNavigationUI(navigator: Navigator, ) {
-    BottomNavigation(backgroundColor = Color.Black, contentColor = Color.White) {
+fun BottomNavigationUI(navigator: Navigator ) {
+    BottomNavigation(backgroundColor = Color.Black, contentColor = Color.White, modifier = Modifier.height(64.dp)) {
         val items = listOf(
             NavigationScreen.HomeNav,
             NavigationScreen.SearchNav,
@@ -51,9 +57,10 @@ fun BottomNavigationUI(navigator: Navigator, ) {
             NavigationScreen.ProfileNav,
         )
         items.forEach {
+            val isSelected =  it.route == currentRoute(navigator)
             BottomNavigationItem(
-                selected = it.route == currentRoute(navigator),
-                icon = it.navIcon,
+                selected = isSelected,
+                icon = { BottomNavigationItem( isSelected, it.navIcon) },
                 onClick = {
                     navigator.navigate(
                         it.route,
@@ -64,4 +71,21 @@ fun BottomNavigationUI(navigator: Navigator, ) {
                 })
         }
     }
+}
+
+@Composable
+fun BottomNavigationItem(isSelected: Boolean,  menu: @Composable () -> Unit) {
+   if(isSelected){
+       return Box(
+           modifier = Modifier
+               .height(50.dp)
+               .width(50.dp)
+               .clip(RoundedCornerShape(120.dp))
+               .background(theme.Primary),
+           contentAlignment = Alignment.Center,
+       ) {
+           menu()
+       }
+   }
+    return menu()
 }
