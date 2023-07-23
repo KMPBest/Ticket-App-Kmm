@@ -70,10 +70,9 @@ fun NowPlayingItem(
             Row(modifier = Modifier.padding(vertical = 30.dp)) {
                 Box(
                     modifier = Modifier
-                        .border(1.dp, Gray, shape = RoundedCornerShape(10.dp))
+                        .border(1.dp, MaterialTheme.colors.surface, shape = RoundedCornerShape(10.dp))
                         .padding(vertical = 5.dp, horizontal = 10.dp),
                     contentAlignment = Alignment.Center,
-
                     ) {
                     Text("Action", style = MaterialTheme.typography.regular10LightGray)
                 }
