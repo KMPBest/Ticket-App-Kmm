@@ -38,7 +38,7 @@ fun HomeScreen(
     Box(modifier = Modifier.fillMaxSize()) {
        LazyColumn(modifier = Modifier.padding(top = 20.dp).fillMaxSize()){
            // Search
-           item{
+           item {
                 Column(modifier = Modifier.padding(horizontal = 30.dp)) {
                     TextField(
                         modifier = Modifier.fillMaxWidth().border(2.dp, LightGray, shape = RoundedCornerShape(20.dp)),
@@ -84,11 +84,11 @@ fun HomeScreen(
                    LazyRow {
                        item{
                            Spacer(modifier = Modifier.width(20.dp))
-                           NowPlayingItem()
+                           NowPlayingItem(navigator)
                            Spacer(modifier = Modifier.width(20.dp))
                        }
                        item{
-                           NowPlayingItem()
+                           NowPlayingItem(navigator)
                        }
                    }
                }

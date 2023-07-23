@@ -18,15 +18,8 @@ fun App() {
     val navigator = rememberNavigator()
 
     AppTheme {
-        Scaffold(topBar = {
-            if (isBackButtonEnable(navigator)) {
-                AppBarWithArrow(
-                    "Movie"
-                ) {
-                    navigator.goBack()
-                }
-            }
-        }, bottomBar = {
+        Scaffold(
+        bottomBar = {
             when (currentRoute(navigator)) {
                 NavigationScreen.Home.route, NavigationScreen.Search.route, NavigationScreen.Ticket.route, NavigationScreen.Profile.route -> {
                     BottomNavigationUI(navigator)
