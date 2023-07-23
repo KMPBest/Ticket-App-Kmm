@@ -1,6 +1,5 @@
 package screens.movieDetail.movieDetail
 
-import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
@@ -25,7 +24,6 @@ import androidx.compose.ui.unit.dp
 import moe.tlaster.precompose.navigation.Navigator
 import screens.components.common.Header
 import screens.components.home.CastItem
-import screens.components.home.NowPlayingItem
 import theme.*
 import utils.AsyncImage
 

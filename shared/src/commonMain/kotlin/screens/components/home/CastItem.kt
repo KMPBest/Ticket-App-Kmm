@@ -15,7 +15,6 @@ import androidx.compose.ui.graphics.DefaultAlpha
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
-import theme.medium14
 import theme.medium8
 import utils.AsyncImage
 
