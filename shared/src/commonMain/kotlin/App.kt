@@ -1,6 +1,5 @@
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import moe.tlaster.precompose.navigation.Navigator
@@ -10,6 +9,7 @@ import navigation.Navigation
 import navigation.NavigationScreen
 import navigation.currentRoute
 import screens.components.AppBarWithArrow
+import theme.AppTheme
 
 @OptIn(ExperimentalAnimationApi::class, ExperimentalMaterialApi::class)
 @Composable
@@ -17,7 +17,7 @@ fun App() {
 
     val navigator = rememberNavigator()
 
-    MaterialTheme {
+    AppTheme {
         Scaffold(topBar = {
             if (isBackButtonEnable(navigator)) {
                 AppBarWithArrow(

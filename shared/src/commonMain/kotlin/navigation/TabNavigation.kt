@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
+import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
@@ -49,7 +50,7 @@ fun currentRoute(navigator: Navigator): String? {
 }
 @Composable
 fun BottomNavigationUI(navigator: Navigator ) {
-    BottomNavigation(backgroundColor = Color.Black, contentColor = Color.White, modifier = Modifier.height(64.dp)) {
+    BottomNavigation(backgroundColor = MaterialTheme.colors.background, contentColor = MaterialTheme.colors.onBackground, modifier = Modifier.height(64.dp)) {
         val items = listOf(
             NavigationScreen.HomeNav,
             NavigationScreen.SearchNav,

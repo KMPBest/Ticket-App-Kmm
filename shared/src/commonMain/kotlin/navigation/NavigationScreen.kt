@@ -3,10 +3,12 @@ package navigation
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
@@ -37,6 +39,7 @@ sealed class NavigationScreen @OptIn(ExperimentalResourceApi::class) constructor
             painterResource("media.xml"),
             null,
             modifier = Modifier.height(20.dp).width(20.dp),
+            colorFilter = ColorFilter.tint(MaterialTheme.colors.onBackground)
         )
     })
 
@@ -57,6 +60,7 @@ sealed class NavigationScreen @OptIn(ExperimentalResourceApi::class) constructor
             painterResource("ticket.xml"),
             null,
             modifier = Modifier.height(20.dp).width(20.dp),
+            colorFilter = ColorFilter.tint(MaterialTheme.colors.onBackground)
         )
     })
 
@@ -66,6 +70,7 @@ sealed class NavigationScreen @OptIn(ExperimentalResourceApi::class) constructor
             painterResource("person.xml"),
             null,
             modifier = Modifier.height(20.dp).width(20.dp),
+            colorFilter = ColorFilter.tint(MaterialTheme.colors.onBackground)
         )
     })
 }
