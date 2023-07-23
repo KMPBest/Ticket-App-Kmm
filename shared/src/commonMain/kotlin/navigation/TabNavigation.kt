@@ -18,7 +18,9 @@ import androidx.compose.ui.unit.dp
 import moe.tlaster.precompose.navigation.NavHost
 import moe.tlaster.precompose.navigation.NavOptions
 import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.path
 import screens.home.home.HomeScreen
+import screens.movieDetail.movieDetail.MovieDetailScreen
 import screens.profile.profile.ProfileScreen
 import screens.search.search.SearchScreen
 import screens.ticket.ticket.TicketScreen
@@ -40,6 +42,12 @@ fun Navigation(navigator: Navigator) {
         }
         scene(route = NavigationScreen.Profile.route) {
             ProfileScreen(navigator)
+        }
+        scene(route = NavigationScreen.MovieDetail.route.plus(NavigationScreen.MovieDetail.objectPath)) { backStackEntry ->
+            val id: Int? = backStackEntry.path<Int>(NavigationScreen.MovieDetail.objectName)
+            id?.let {
+                MovieDetailScreen(navigator, it)
+            }
         }
     }
 }
