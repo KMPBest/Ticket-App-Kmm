@@ -1,5 +1,6 @@
 package theme
 
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Typography
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.TextStyle
@@ -32,7 +33,7 @@ val Typography.medium24: TextStyle
     get() {
         return TextStyle(
             fontFamily = FontFamily.Default,
-            color = White,
+            color = MaterialTheme.colors.onBackground,
             fontSize = 24.sp,
             fontWeight = FontWeight.Medium
         )
@@ -44,7 +45,7 @@ val Typography.regular24: TextStyle
     get() {
         return TextStyle(
             fontFamily = FontFamily.Default,
-            color = White,
+            color = MaterialTheme.colors.onBackground,
             fontSize = 24.sp,
             fontWeight = FontWeight.W400
         )
@@ -55,7 +56,7 @@ val Typography.semiBold20: TextStyle
     get() {
         return TextStyle(
             fontFamily = FontFamily.Default,
-            color = White,
+            color = MaterialTheme.colors.onBackground,
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold
         )
@@ -66,7 +67,7 @@ val Typography.semiBold16: TextStyle
     get() {
         return TextStyle(
             fontFamily = FontFamily.Default,
-            color = White,
+            color = MaterialTheme.colors.onBackground,
             fontSize = 16.sp,
             fontWeight = FontWeight.Bold
         )
@@ -77,7 +78,7 @@ val Typography.medium16: TextStyle
     get() {
         return TextStyle(
             fontFamily = FontFamily.Default,
-            color = White,
+            color = MaterialTheme.colors.onBackground,
             fontSize = 16.sp,
             fontWeight = FontWeight.Medium
         )
@@ -88,7 +89,7 @@ val Typography.regular14: TextStyle
     get() {
         return TextStyle(
             fontFamily = FontFamily.Default,
-            color = White,
+            color = MaterialTheme.colors.onBackground,
             fontSize = 14.sp,
             fontWeight = FontWeight.W400
         )
@@ -99,7 +100,7 @@ val Typography.regular14LightGray: TextStyle
     get() {
         return TextStyle(
             fontFamily = FontFamily.Default,
-            color = LightGray,
+            color = MaterialTheme.colors.surface,
             fontSize = 14.sp,
             fontWeight = FontWeight.W400
         )
@@ -110,7 +111,7 @@ val Typography.regular14Gray: TextStyle
     get() {
         return TextStyle(
             fontFamily = FontFamily.Default,
-            color = Gray,
+            color = MaterialTheme.colors.surface,
             fontSize = 14.sp,
             fontWeight = FontWeight.W400
         )
@@ -121,7 +122,7 @@ val Typography.medium14: TextStyle
     get() {
         return TextStyle(
             fontFamily = FontFamily.Default,
-            color = White,
+            color = MaterialTheme.colors.onBackground,
             fontSize = 14.sp,
             fontWeight = FontWeight.Medium
         )
@@ -132,7 +133,7 @@ val Typography.medium12: TextStyle
     get() {
         return TextStyle(
             fontFamily = FontFamily.Default,
-            color = White,
+            color = MaterialTheme.colors.onBackground,
             fontSize = 12.sp,
             fontWeight = FontWeight.Medium
         )
@@ -143,7 +144,7 @@ val Typography.medium12Dark: TextStyle
     get() {
         return TextStyle(
             fontFamily = FontFamily.Default,
-            color = Dark,
+            color = MaterialTheme.colors.secondary,
             fontSize = 12.sp,
             fontWeight = FontWeight.Medium
         )
@@ -154,7 +155,7 @@ val Typography.regular12: TextStyle
     get() {
         return TextStyle(
             fontFamily = FontFamily.Default,
-            color = White,
+            color = MaterialTheme.colors.onBackground,
             fontSize = 12.sp,
             fontWeight = FontWeight.W400
         )
@@ -165,7 +166,7 @@ val Typography.light12: TextStyle
     get() {
         return TextStyle(
             fontFamily = FontFamily.Default,
-            color = White,
+            color = MaterialTheme.colors.onBackground,
             fontSize = 12.sp,
             fontWeight = FontWeight.Light
         )
@@ -176,7 +177,7 @@ val Typography.medium10: TextStyle
     get() {
         return TextStyle(
             fontFamily = FontFamily.Default,
-            color = White,
+            color = MaterialTheme.colors.onBackground,
             fontSize = 10.sp,
             fontWeight = FontWeight.Medium
         )
@@ -187,7 +188,7 @@ val Typography.regular10: TextStyle
     get() {
         return TextStyle(
             fontFamily = FontFamily.Default,
-            color = White,
+            color = MaterialTheme.colors.onBackground,
             fontSize = 10.sp,
             fontWeight = FontWeight.W400
         )
@@ -198,7 +199,7 @@ val Typography.regular10LightGray: TextStyle
     get() {
         return TextStyle(
             fontFamily = FontFamily.Default,
-            color = LightGray,
+            color = MaterialTheme.colors.surface,
             fontSize = 10.sp,
             fontWeight = FontWeight.W400
         )
@@ -209,7 +210,7 @@ val Typography.medium8: TextStyle
     get() {
         return TextStyle(
             fontFamily = FontFamily.Default,
-            color = White,
+            color = MaterialTheme.colors.onBackground,
             fontSize = 8.sp,
             fontWeight = FontWeight.Medium
         )

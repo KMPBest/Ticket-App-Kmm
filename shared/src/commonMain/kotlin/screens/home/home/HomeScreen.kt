@@ -29,11 +29,11 @@ fun HomeScreen(
            item {
                 Column(modifier = Modifier.padding(horizontal = 30.dp)) {
                     TextField(
-                        modifier = Modifier.fillMaxWidth().border(2.dp, LightGray, shape = RoundedCornerShape(20.dp)),
+                        modifier = Modifier.fillMaxWidth().border(2.dp, MaterialTheme.colors.secondary, shape = RoundedCornerShape(20.dp)),
                         value = search,
                         colors = TextFieldDefaults.textFieldColors(
                             backgroundColor = MaterialTheme.colors.background,
-                            cursorColor = LightGray,
+                            cursorColor = MaterialTheme.colors.secondary,
                             focusedIndicatorColor = Tranparent,
                             unfocusedIndicatorColor = Tranparent,
                         ),

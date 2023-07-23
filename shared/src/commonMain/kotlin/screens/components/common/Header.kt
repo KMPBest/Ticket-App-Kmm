@@ -5,6 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.runtime.Composable
@@ -30,7 +31,8 @@ fun Header(
                 .clickable { navigator.goBack() }){
             Icon(
                 Icons.Filled.Clear,
-                contentDescription = "delete"
+                contentDescription = "delete",
+                tint = MaterialTheme.colors.onPrimary
             )
         }
     }
