@@ -1,5 +1,5 @@
 # Ticket-App-Kmm 
-An app that allows you to discover anime built with Kotlin Multiplatform Mobile which allows sharing of both UI and logic between the Android and IOS platforms 📱
+An app that allows you to discover movie built with Kotlin Multiplatform Mobile which allows sharing of both UI and logic between the Android and IOS platforms (Dark Theme/Light Theme) 📱
 
 ## Design
 ![image 2](https://github.com/kmmJoy/Ticket-App-Kmm/assets/75264221/fa180f62-a95e-411b-9251-3994e9dcce09)
