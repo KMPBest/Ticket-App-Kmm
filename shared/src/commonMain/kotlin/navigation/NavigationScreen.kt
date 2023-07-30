@@ -33,6 +33,9 @@ sealed class NavigationScreen @OptIn(ExperimentalResourceApi::class) constructor
     object MovieDetail :
         NavigationScreen("movie_detail_screen", objectName = "id", objectPath = "/{id}")
 
+    object BuyTicket :
+        NavigationScreen("buy_ticket_screen", objectName = "id", objectPath = "/{id}")
+
     @OptIn(ExperimentalResourceApi::class)
     object HomeNav : NavigationScreen("home_screen", navIcon = {
         Image(
