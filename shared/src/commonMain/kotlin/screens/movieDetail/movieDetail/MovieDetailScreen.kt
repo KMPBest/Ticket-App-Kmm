@@ -2,6 +2,7 @@ package screens.movieDetail.movieDetail
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
@@ -22,6 +23,7 @@ import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import moe.tlaster.precompose.navigation.Navigator
+import navigation.NavigationScreen
 import screens.components.common.Header
 import screens.components.home.CastItem
 import theme.*
@@ -191,7 +193,9 @@ fun MovieDetailScreen(
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(20.dp))
-                            .background(Primary),
+                            .background(Primary).clickable {
+                            navigator.navigate(NavigationScreen.BuyTicket.route.plus("/12"))
+                        }
                         ) {
                         Text(
                             "Select Seats",
