@@ -150,7 +150,7 @@ fun BuyTicketScreen(
                     )
                     Text(
                         "$ 15.00",
-                        style = MaterialTheme.typography.medium24
+                        style = MaterialTheme.typography.medium24()
                     )
                 }
             }
@@ -166,7 +166,7 @@ fun BuyTicketScreen(
                 ) {
                     Text(
                         "Buy Tickets",
-                        style = MaterialTheme.typography.medium24
+                        style = MaterialTheme.typography.medium24()
                     )
 
             }

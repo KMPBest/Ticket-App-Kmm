@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.runtime.Composable
@@ -15,10 +16,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import moe.tlaster.precompose.navigation.Navigator
 import theme.Primary
+import theme.semiBold20
 
 @Composable
 fun Header(
-    navigator: Navigator
+    navigator: Navigator,
+    title: String = ""
 ){
     Box( modifier = Modifier.fillMaxWidth().padding(35.dp)) {
         Box(
@@ -33,6 +36,14 @@ fun Header(
                 Icons.Filled.Clear,
                 contentDescription = "delete",
                 tint = MaterialTheme.colors.onPrimary
+            )
+        }
+
+        if(title.isNotEmpty()){
+            Text(
+                title,
+                style = MaterialTheme.typography.semiBold20,
+                modifier = Modifier.align(Alignment.Center)
             )
         }
     }

@@ -1,8 +1,10 @@
 package theme
 
+import androidx.compose.material.Colors
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Typography
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -28,17 +30,15 @@ val Typography = Typography(
 
 )
 
-val Typography.medium24: TextStyle
-    @Composable
-    get() {
-        return TextStyle(
-            fontFamily = FontFamily.Default,
-            color = MaterialTheme.colors.onBackground,
-            fontSize = 24.sp,
-            fontWeight = FontWeight.Medium
-        )
-    }
-
+@Composable
+fun Typography.medium24(color: Color = MaterialTheme.colors.onBackground): TextStyle{
+    return TextStyle(
+        fontFamily = FontFamily.Default,
+        color = color,
+        fontSize = 24.sp,
+        fontWeight = FontWeight.Medium
+    )
+}
 
 val Typography.regular24: TextStyle
     @Composable
@@ -72,6 +72,16 @@ val Typography.semiBold16: TextStyle
             fontWeight = FontWeight.Bold
         )
     }
+
+@Composable
+fun Typography.medium16(color: Color = MaterialTheme.colors.onBackground): TextStyle{
+    return TextStyle(
+        fontFamily = FontFamily.Default,
+        color = color,
+        fontSize = 16.sp,
+        fontWeight = FontWeight.Medium
+    )
+}
 
 val Typography.medium16: TextStyle
     @Composable
@@ -128,6 +138,16 @@ val Typography.medium14: TextStyle
         )
     }
 
+@Composable
+fun Typography.medium12(color: Color = MaterialTheme.colors.onBackground): TextStyle{
+    return TextStyle(
+        fontFamily = FontFamily.Default,
+        color = color,
+        fontSize = 12.sp,
+        fontWeight = FontWeight.Medium
+    )
+}
+
 val Typography.medium12: TextStyle
     @Composable
     get() {
@@ -150,6 +170,16 @@ val Typography.medium12Dark: TextStyle
         )
     }
 
+@Composable
+fun Typography.regular12(color: Color = MaterialTheme.colors.onBackground): TextStyle {
+    return TextStyle(
+        fontFamily = FontFamily.Default,
+        color = color,
+        fontSize = 12.sp,
+        fontWeight = FontWeight.W400
+    )
+}
+
 val Typography.regular12: TextStyle
     @Composable
     get() {
@@ -171,6 +201,15 @@ val Typography.light12: TextStyle
             fontWeight = FontWeight.Light
         )
     }
+@Composable
+fun Typography.medium10(color: Color = MaterialTheme.colors.onBackground): TextStyle{
+    return TextStyle(
+        fontFamily = FontFamily.Default,
+        color = color,
+        fontSize = 10.sp,
+        fontWeight = FontWeight.Medium
+    )
+}
 
 val Typography.medium10: TextStyle
     @Composable

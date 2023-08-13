@@ -94,7 +94,7 @@ fun MovieDetailScreen(
 
                     Text(
                         "John Wick: Chapter 4",
-                        style = MaterialTheme.typography.medium24,
+                        style = MaterialTheme.typography.medium24(),
                         modifier = Modifier.padding(top = 10.dp)
                     )
 

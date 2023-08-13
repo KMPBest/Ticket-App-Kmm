@@ -41,7 +41,7 @@ fun DatePickerComponent(){
                         ) {
                             Text(
                                 "17",
-                                style = MaterialTheme.typography.medium24
+                                style = MaterialTheme.typography.medium24()
                             )
                             Text(
                                 "Sun",
@@ -68,7 +68,7 @@ fun DatePickerComponent(){
                         ) {
                             Text(
                                 "18",
-                                style = MaterialTheme.typography.medium24
+                                style = MaterialTheme.typography.medium24()
                             )
                             Text(
                                 "Mon",
